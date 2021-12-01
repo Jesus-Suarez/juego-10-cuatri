@@ -107,8 +107,9 @@ class Personaje{
         strokeWeight(1);
       }
     }
-          fill(0, 408, 612);
-      text("Nivel: "+lvl, cx-cf.ss +50, cy-85);
+    
+    fill(0, 408, 612);
+    text("Lvl: "+lvl, cx-cf.ss +50, cy-85);
     drawLifeBar(cx-cf.ss,cy+45);
     cdtturn.drawTimeBar(cx-cf.ss,cy+75); 
   }
