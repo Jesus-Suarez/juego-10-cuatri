@@ -42,7 +42,7 @@ class LangFiles{
     if(languaje==LGSPA){
       file=loadStrings("spa.lang");
     }else{
-      file=loadStrings("spa.lang");
+      file=loadStrings("eng.lang");
     }
     println("lineas totales: "+file.length+" para el lenguaje "+ languaje+ " NOTA: SI AMBOS ARCHIVOS NO TIENEN LAS MISMAS LINEAS, HABRA ERRORES");
     return file.length;
