@@ -10,9 +10,9 @@ class LangFiles{
   int actlang;
   int ns;
   
-  LangFiles(int l,int n){
+  LangFiles(int l){
     actlang=l;
-    ns=n;
+    ns=getCharacterLanguajes(actlang);
     langs=new String[ns][2];
     loadLang(LGSPA);
     loadLang(LGENG);
@@ -36,5 +36,15 @@ class LangFiles{
   
   String showString(int i){
     return langs[i][actlang];
+  }
+
+  int getCharacterLanguajes(int languaje){
+    if(languaje==LGSPA){
+      file=loadStrings("spa.lang");
+    }else{
+      file=loadStrings("eng.lang");
+    }
+    println("lineas totales: "+file.length+" para el lenguaje "+ languaje+ " NOTA: SI AMBOS ARCHIVOS NO TIENEN LAS MISMAS LINEAS, HABRA ERRORES");
+    return file.length;
   }
 }

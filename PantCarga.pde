@@ -7,29 +7,33 @@
 class PantCarga{ 
   boolean loading;
   CoolDownTimer cdt;
-  SpriteSet cristal;
+  SpriteSet logo_loading;
   String message;
+  PImage logo_gif;
   
   PantCarga(){
-    loading=true;
+    loading = true;
+    message = lf.showString(12);
     cdt=new CoolDownTimer(120);
-    cristal=new SpriteSet("sprite/cristal/","cristal",".png",5,10,true,0);
-    message=lf.showString(26);
+    logo_loading = new SpriteSet("loading/logo_sprites/","frame-",".gif",49,2,true,0);
   }
   
   void display(){
     background(0);
     fill(255);
     imageMode(CENTER);
-    cristal.display(400,350,cf.sp,cf.sp);
+    logo_loading.display(400,350,cf.sp,cf.sp);
     textAlign(CENTER,CENTER);
     text(lf.showString(6),400,400);
     text(message,400,500);
-    if(!loading && !cdt.isActive())
+    if(!loading && !cdt.isActive()){
       cdt.activate();
-    if(cdt.isActive())
+    }
+    if(cdt.isActive()){
       cdt.coolingDown();
-    if(cdt.isOff())
+    }
+    if(cdt.isOff()){
       gc.setPantAct(PNINT);
+    }
   }
 }
