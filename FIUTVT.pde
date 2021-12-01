@@ -276,7 +276,7 @@ void loadAudio(){
 
 void music(){
   if(!gc.getMusicStatus()){
-    //gc.musicManager(MSCON,false);
+    gc.musicManager(MSCON,false);
   }
 }
 
