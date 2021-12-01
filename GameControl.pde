@@ -80,30 +80,47 @@ class GameControl{
   
   void mouseProcess(int x,int y, int b){
     switch(pantact){
-      case PNCBT: pncbt.mouseProcess(x,y,b);
-                  break;
-      case PNCFG: pncfg.mouseProcess(x,y,b);
-                  break;            
-      case PNCRD: pncrd.mouseProcess(x,y,b);
-                  break;  
-      case PNCRE: pncre.mouseProcess(x,y,b);
-                  break;
-      case PNFIN: pnfin.mouseProcess(x,y,b);
-                  break;            
-      case PNINT: pnint.mouseProcess(x,y,b);
-                  break;
-      case PNLVL: pnlvl.mouseProcess(x,y,b);
-                  break;            
-      case PNMAP: pnmap.mouseProcess(x,y,b);
-                  break;            
-      case PNPAU: pnpau.mouseProcess(x,y,b);
-                  break;
-      case PNTND: pntnd.mouseProcess(x,y,b);
-                  break;            
-      default:    if(b==LEFT)
-                    sigPant();
-                  if(b==RIGHT)
-                    antPant();
+      case PNCBT: 
+        pncbt.mouseProcess(x,y,b);
+      break;
+      case PNCFG: 
+        pncfg.mouseProcess(x,y,b);
+      break;            
+      case PNCRD: 
+        pncrd.mouseProcess(x,y,b);
+      break;  
+      case PNCRE: 
+        pncre.mouseProcess(x,y,b);
+      break;
+      case PNFIN: 
+        pnfin.mouseProcess(x,y,b);
+      break;            
+      case PNINT: 
+        pnint.mouseProcess(x,y,b);
+      break;
+      case PNLVL: 
+        pnlvl.mouseProcess(x,y,b);
+      break;            
+      case PNMAP: 
+        pnmap.mouseProcess(x,y,b);
+      break;            
+      case PNPAU: 
+        pnpau.mouseProcess(x,y,b);
+      break;
+      case PNTND: 
+        pntnd.mouseProcess(x,y,b);
+      break;            
+      case PNCRG: 
+        //pntnd.mouseProcess(x,y,b);
+      break;            
+      default:    
+        if(b==LEFT){
+          sigPant();
+        }
+        if(b==RIGHT){
+          antPant();
+        }
+      break;
     }  
   }
   

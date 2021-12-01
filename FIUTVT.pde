@@ -156,7 +156,7 @@ void setup(){
   textFont(fbase);
   bitacora=new Bitacora();
   cf=new ConfigFile();
-  lf=new LangFiles(cf.lang,cf.ns);
+  lf=new LangFiles(cf.lang);
   ed=new EnemyData();
   td=new TiraDados();
   ml=new MapLoader();
@@ -275,8 +275,9 @@ void loadAudio(){
 }
 
 void music(){
-  if(!gc.getMusicStatus())
-    gc.musicManager(MSCON,false);
+  if(!gc.getMusicStatus()){
+    //gc.musicManager(MSCON,false);
+  }
 }
 
 void setFillStroke(color c){

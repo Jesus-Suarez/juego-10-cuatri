@@ -1,4 +1,4 @@
-#language=1
+#language=0
 #langstr=34
 #ppa=4
 #minatr=2
@@ -34,3 +34,4 @@
 #ss=80
 #hs=40
 #sp=50
+
