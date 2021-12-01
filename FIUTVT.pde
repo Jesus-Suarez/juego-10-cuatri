@@ -29,6 +29,8 @@ final int CLTRR=1;
 final int CLBSQ=2;
 final int CLPST=3;
 final int CLTND=4;
+final int CLPTEVT=5;
+final int CLPTEHT=6;
 final boolean MSCON=true;
 final boolean MSCOFF=false;
 final int ITPTN=0;
@@ -181,21 +183,25 @@ void keyReleased(){
 
   
 void createPal(){
-  paleta=new color[5];
+  paleta=new color[7];
   paleta[CLAWA]=color(164,218,247);
   paleta[CLTRR]=color(150,113, 75);
   paleta[CLBSQ]=color( 88,138, 87);
   paleta[CLPST]=color( 91,244,103);
   paleta[CLTND]=color(105, 37,231);
+  paleta[CLPTEVT]=color(105, 37,231);
+  paleta[CLPTEHT]=color(105, 37,231);
 }
 
 void createTerreno(){
-  terreno=new PImage[5];
+  terreno=new PImage[7];
   terreno[CLAWA]=loadImage("sprite/terreno/agua_ok.png");
   terreno[CLTRR]=loadImage("sprite/terreno/tierra_ok.png");
   terreno[CLBSQ]=loadImage("sprite/terreno/bosque_ok.png");
   terreno[CLPST]=loadImage("sprite/terreno/pasto_ok.png");
   terreno[CLTND]=loadImage("sprite/terreno/tienda_ok.png");
+  terreno[CLPTEVT]=loadImage("sprite/terreno/puente_vertical.png");
+  terreno[CLPTEHT]=loadImage("sprite/terreno/puente_horizontal.png");
 }
 
 void loadAudio(){
