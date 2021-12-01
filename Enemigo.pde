@@ -43,7 +43,9 @@ class Enemigo{
   }
   
   void display(){
-    if(gmode){  
+    if(gmode){ 
+      fill(0, 408, 612);
+      text("Nivel: "+lvl, cx-cf.ss +43, cy+sprite.height/2-120);
       image(sprite,cx,cy);
       drawLifeBar(cx-cf.ss,cy+sprite.height/2+5);
       cdtturn.drawTimeBar(cx-cf.ss,cy+sprite.height/2+35);
