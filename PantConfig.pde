@@ -22,6 +22,7 @@ class PantConfig{
     background(imgbackgr);
     fill(255);
     text(lf.showString(8),400,100);
+    text(lf.showString(34),250,250);
     btnidio.display();
     btnacep.display();
     btnback.display();
@@ -32,9 +33,12 @@ class PantConfig{
       int newlang=(lf.getLang()==LGSPA)?LGENG:LGSPA;
       lf.setLang(newlang);
     }  
-    if(btnacep.isClicked(x,y) && b==LEFT)
+    if(btnacep.isClicked(x,y) && b==LEFT){
       cf.saveConfig(lf);  
-    if(btnback.isClicked(x,y) && b==LEFT)
       gc.setPantAct(PNINT);  
+    }
+    if(btnback.isClicked(x,y) && b==LEFT){
+      gc.setPantAct(PNINT);  
+    }
   }
 }

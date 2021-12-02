@@ -61,8 +61,8 @@ final boolean RSDFT=false;
 final int ENFXINT=0;
 final int ENFXATK=1;
 final int ENFXDED=2;
-final color COLBTNFACE=color(225,48,35);
-final color COLBTNBRDR=color(234,239,34);
+final color COLBTNFACE=color(0,223,185);
+final color COLBTNBRDR=color(0,255,212);
 final color COLBLOOD=color(250,0,0);
 final color COLMKGRN=color(0,250,0);
 final color COLPERS=color(150,150,0);
@@ -217,6 +217,7 @@ void loadAudio(){
   sfxcash.setGain(0.15);
   sfxdrink.setGain(0.15);
   sfxheal.setGain(0.15);
+
   //efectos de intro de enemigos
   sfxbones=minim.loadSample("sound/fx/intro/bones.mp3",512);
   sfximp=minim.loadSample("sound/fx/intro/imp.mp3",512);

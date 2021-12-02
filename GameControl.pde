@@ -139,24 +139,27 @@ class GameControl{
   }
   
   void playTrack(int t,boolean v){
-    if(t==PNCBT)msccombt.loop();else{msccombt.pause();msccombt.rewind();}
-    if(t==PNCRD)msccreds.loop();else{msccreds.pause();msccreds.rewind();}
-    if(t==PNCRE)msccrea.loop();else{msccrea.pause();msccrea.rewind();}
-    if(t==PNFIN)
-      if(v)
+    if(t==PNCBT){msccombt.loop();}else{msccombt.pause();msccombt.rewind();}
+    if(t==PNCRD){msccreds.loop();}else{msccreds.pause();msccreds.rewind();}
+    if(t==PNCRE){msccrea.loop();}else{msccrea.pause();msccrea.rewind();}
+    if(t==PNFIN){
+      if(v){
         mscvctry.loop();
-      else
+      }
+      else{
         mscdefet.loop();
+      }
+    }
     else{    
       mscvctry.pause();
       mscvctry.rewind();
       mscdefet.pause();
       mscdefet.rewind();
     } 
-    if(t==PNINT)mscintro.loop();else{mscintro.pause();mscintro.rewind();}
-    if(t==PNLVL)msclvlup.loop();else{msclvlup.pause();msclvlup.rewind();}
-    if(t==PNMAP)mscmundo.loop();else{mscmundo.pause();mscmundo.rewind();}
-    if(t==PNTND)mscstore.loop();else{mscstore.pause();mscstore.rewind();}
+    if(t==PNINT){mscintro.loop();}else{mscintro.pause();mscintro.rewind();}
+    if(t==PNLVL){msclvlup.loop();}else{msclvlup.pause();msclvlup.rewind();}
+    if(t==PNMAP){mscmundo.loop();}else{mscmundo.pause();mscmundo.rewind();}
+    if(t==PNTND){mscstore.loop();}else{mscstore.pause();mscstore.rewind();}
   }
   
   boolean getMusicStatus(){

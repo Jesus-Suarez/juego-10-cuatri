@@ -11,7 +11,7 @@
 #10pncrd=Créditos del Juego
 #11pnfin=Fin del Juego
 #12pnint=Death Soldier
-#13pnlvl=Subiste de Nivel
+#13pnlvl=¡Subiste un nivel!
 #14pnmap=Mapa
 #15pnpau=Pausa
 #16pntnd=Tiendita
@@ -32,3 +32,4 @@
 #31btndef=Defiende
 #32btnitem=Usa Item
 #33txtitlft=Items por elegir: 
+#34txtlanguaje=Lenguaje predeterminado: 

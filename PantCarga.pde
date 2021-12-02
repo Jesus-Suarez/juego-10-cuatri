@@ -14,8 +14,8 @@ class PantCarga{
   PantCarga(){
     loading = true;
     message = lf.showString(12);
-    cdt=new CoolDownTimer(120);
-    logo_loading = new SpriteSet("loading/logo_sprites/","frame-",".gif",49,2,true,0);
+    cdt=new CoolDownTimer(60);
+    logo_loading = new SpriteSet("loading/logo_sprites/","frame-",".gif",49,1,true,0);
   }
   
   void display(){
