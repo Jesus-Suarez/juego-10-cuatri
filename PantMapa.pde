@@ -69,9 +69,9 @@ class PantMapa{
   
   void displayPlanoSky(){
     if(gmode){
-      tint(255,64);
-      image(imgsky,400,400);
-      noTint();
+      //tint(255,64);
+      //image(imgsky,400,400);
+      //noTint();
       displayClouds();
     }  
   }
