@@ -28,7 +28,9 @@ class PantCombate{
   boolean turn;
   boolean result;
   boolean intro;
+  boolean isAtaked = false;
   int action;
+  PImage imagenSangre = loadImage("sprite/icon/blood.png");
     
   PantCombate(){
     pasto=loadImage("sprite/backgr/pasto_ok.png");
@@ -77,6 +79,9 @@ class PantCombate{
       cdte.deactivate();
       enemyEndAction();
     }
+    if(isAtaked){
+      image(imagenSangre,235,350,60,60);    
+    }    
   }
   
   void selectBackgr(int t){
@@ -181,8 +186,10 @@ class PantCombate{
     action=a;
     switch(action){
       case ACATK: atkp=pers.getAtkDamage()+td.tira2D6();
-                  defe=enemy.getDefDamage();
-                  if(atkp>defe){
+                  defe=enemy.getDefDamage();                  
+                  if(atkp>defe){                    
+                    isAtaked=true;
+                    println("atakado");
                     enemy.herida(atkp-defe);
                     sfxsword.trigger();
                     if(!enemy.isAlive()){
