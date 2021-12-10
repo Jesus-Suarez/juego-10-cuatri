@@ -165,8 +165,8 @@ void setup(){
   dcbt=new DatosDados();
   gc=new GameControl();
   minim=new Minim(this);
-    
   thread("loadAudio");
+  bitacora.agregaDatosLn("NUEVO JUEGO INICIADO");
 }
 
 void draw(){
@@ -283,7 +283,7 @@ void loadAudio(){
 
 void music(){
   if(!gc.getMusicStatus()){
-    gc.musicManager(MSCON,false);
+    //gc.musicManager(MSCON,false);
   }
 }
 

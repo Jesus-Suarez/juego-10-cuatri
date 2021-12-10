@@ -7,17 +7,26 @@ class Bitacora{
   PrintWriter output;
   
   Bitacora(){
-    String s="data/testing/test ";
-    s=s+agregaFechaHora();
+    String s="data/testing/game ";
+    s=s+agregaFecha();
     s=s+".log";
     output=createWriter(s);
   }
   
-  String agregaFechaHora(){
-    return ""+month()+"-"+day()+"-"+year()+" "+hour()+" con "+minute();
+  String agregaFecha(){
+    return ""+year()+"-"+month()+"-"+day() +" a las "+hour()  /*+" con "+minute() */;
   }
+
+  String agregarFechaHora(){
+    //Aqui guardamos cada bitacora por tiempo especifico Ejemplo:
+    //[2021-12-09 21:57:00] - MENSAJE
+    return ""+agregaFecha()+" "+hour()+":"+minute()+":"+second();
+  }
+
   
   void agregaDatosLn(String s){
+    //Guardamos la bitacora con el formato de fecha y el mensaje a guardar
+    s = "["+agregarFechaHora()+"] - "+s;
     output.println(s);
     output.flush();
   }
@@ -28,9 +37,8 @@ class Bitacora{
   }
   
   void cierraBitacora(){
-    String s="fin de test ";
-    s=s+agregaFechaHora();
-    output.println(s);
+    String s="FIN DEL JUEGO ";
+    agregaDatosLn(s);
     output.flush();
     output.close();
   }

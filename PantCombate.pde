@@ -30,6 +30,7 @@ class PantCombate{
   boolean intro;
   boolean isAtaked = false;
   int action;
+  int messageRandom = 35;
   PImage imagenSangre = loadImage("sprite/icon/blood.png");
     
   PantCombate(){
@@ -80,23 +81,28 @@ class PantCombate{
       enemyEndAction();
     }
     if(isAtaked){
+      text(lf.showString(messageRandom),200,200);
       image(imagenSangre,235,350,60,60);    
     }    
   }
   
   void selectBackgr(int t){
     switch(t){
-      case CLBSQ: background(woods);
-                  break;
-      case CLPST: background(pasto);
-                  break;
-      case CLTRR: background(desrt);
-                  break;            
+      case CLBSQ: 
+        background(woods);
+      break;
+      case CLPST: 
+        background(pasto);
+      break;
+      case CLTRR: 
+        background(desrt);
+      break;            
     }
   }
   
   void startBattle(){
     if(!battleactive){
+      bitacora.agregaDatosLn("¡El jugador entro en combate!");
       fasebatalla=FBINTRO;
       battleactive=BATTLEON;
       createEnemies();
@@ -130,6 +136,8 @@ class PantCombate{
       battleactive=BATTLEOFF;
       gc.musicManager(MSCOFF,false);
       gc.setPantAct(PNMAP);
+      //Agregamos una bitacora si el jugador no termina una batalla
+      bitacora.agregaDatosLn("El jugador salio del combate sin terminar la batalla");
     }
     if(actionactive && btnatk.isClicked(x,y) && b==LEFT){
       btnatk.toggleMarked();
@@ -189,7 +197,7 @@ class PantCombate{
                   defe=enemy.getDefDamage();                  
                   if(atkp>defe){                    
                     isAtaked=true;
-                    println("atakado");
+                    messageRandom = int(random(35, 38));
                     enemy.herida(atkp-defe);
                     sfxsword.trigger();
                     if(!enemy.isAlive()){
@@ -231,6 +239,7 @@ class PantCombate{
   
   void iniciaBatalla(){
     if(!combatactive){
+      isAtaked = false;
       combatactive=true;
       turn=TURNP;
       pers.activateCombat();
@@ -285,6 +294,7 @@ class PantCombate{
   void iniciaEnemyAction(){
     if(!cdte.isActive()){
       cdte.activate();
+      isAtaked=false;
       setTurn(TURNE);
       enemyAction();
     }
@@ -363,6 +373,7 @@ class PantCombate{
   }
   
   void resultVictory(){
+    bitacora.agregaDatosLn("El jugador ha ganado una batalla :D");
     fasebatalla=FBEND;
     getLoot();
     result=RSVCT;
@@ -370,6 +381,7 @@ class PantCombate{
   }
   
   void resultDefeat(){
+    bitacora.agregaDatosLn("El jugador perdio una batalla");
     fasebatalla=FBEND;
     result=RSDFT;
     nextFB();
@@ -385,6 +397,8 @@ class PantCombate{
   void getLoot(){
     pers.exp+=enemy.exp;
     pers.cash+=enemy.cash;
+    //Agregamos mensaje en bitacora de cuanta exp y cash recibe el personaje
+    bitacora.agregaDatosLn("El jugador ha recibido "+enemy.exp+" de experiencia y "+enemy.cash+" pesos");
     pers.updateInv(enemy.item,TMBUY);
   }
 }

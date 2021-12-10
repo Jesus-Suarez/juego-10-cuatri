@@ -47,6 +47,7 @@ class PantLvlUp{
   }
   
   void addAttr(int a){
+    bitacora.agregaDatosLn("El jugador ha subido de nivel");
     pers.addAttr(a);
     sfxheal.trigger();
     gameresult=pers.lvl==cf.lvlfin;

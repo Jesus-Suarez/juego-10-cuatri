@@ -53,6 +53,14 @@ class Boton{
     active=!active;
   }
   
+  void activeMarked(){
+    marked=true;
+  }
+
+  void desactiveMarked(){
+    marked=false;
+  }
+  
   void toggleMarked(){
     marked=!marked;
   }

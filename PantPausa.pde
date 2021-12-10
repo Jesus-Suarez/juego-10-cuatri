@@ -26,6 +26,7 @@ class PantPausa{
     if(btnexit.isClicked(x,y) && b==LEFT){
       gc.musicManager(MSCOFF,false);
       gc.setPantAct(PNINT);
+      bitacora.agregaDatosLn("El jugador salio del juego");
     }
     if(btncont.isClicked(x,y) && b==LEFT){
       gc.pnmap.toggleBlur();

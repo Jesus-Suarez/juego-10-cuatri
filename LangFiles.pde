@@ -44,7 +44,9 @@ class LangFiles{
     }else{
       file=loadStrings("eng.lang");
     }
-    println("lineas totales: "+file.length+" para el lenguaje "+ languaje+ " NOTA: SI AMBOS ARCHIVOS NO TIENEN LAS MISMAS LINEAS, HABRA ERRORES");
+    String message = "lineas totales: "+file.length+" para el lenguaje "+ languaje+ " NOTA: SI AMBOS ARCHIVOS NO TIENEN LAS MISMAS LINEAS, HABRA ERRORES";
+    println(message);
+    bitacora.agregaDatosLn("ADVERTENCIA: "+message);
     return file.length;
   }
 }

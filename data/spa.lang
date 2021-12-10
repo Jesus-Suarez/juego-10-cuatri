@@ -11,7 +11,7 @@
 #10pncrd=Créditos del Juego
 #11pnfin=Fin del Juego
 #12pnint=Death Soldier
-#13pnlvl=¡Subiste un nivel!
+#13pnlvl=¡Subiste un nivel, escoje un regalo!
 #14pnmap=Mapa
 #15pnpau=Pausa
 #16pntnd=Tiendita
@@ -33,3 +33,7 @@
 #32btnitem=Usa Item
 #33txtitlft=Items por elegir: 
 #34txtlanguaje=Lenguaje predeterminado: 
+#35atackPersonake0=¡Eso dolio!
+#36atackPersonake1=¡Mi abuela golpea mejor!
+#37atackPersonake2=¿Es todo lo que tienes?
+#38atackPersonake3=¡Desgraciadoooo!

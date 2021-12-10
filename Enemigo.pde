@@ -76,6 +76,8 @@ class Enemigo{
   }
   
   void herida(int d){
+    String message = "El personaje hizo daño de "+d+" al enemigo";
+    bitacora.agregaDatosLn(message);
     hp-=hp-d>0?d:hp;
     alive=hp>0;
   }

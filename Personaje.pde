@@ -203,6 +203,8 @@ class Personaje{
   }
   
   void herida(int d){
+    String message = "El enemigo hizo un daño de :"+d+" a nuestro personaje";
+    bitacora.agregaDatosLn(message);
     hp-=hp-d>0?d:hp;
     alive=hp>0;
   }
@@ -232,9 +234,19 @@ class Personaje{
   
   void addAttr(int a){
     switch(a){
-      case ATATK: atk++; break;
-      case ATDEF: def++; break;
-      case ATHPM: hpm++; hp=hpp+=cf.hp;
+      case ATATK: 
+        atk++; 
+        bitacora.agregaDatosLn("El jugador decidio aumentar su ataque");
+      break;
+      case ATDEF: 
+        def++; 
+        bitacora.agregaDatosLn("El jugador decidio aumentar su defensa");
+      break;
+      case ATHPM: 
+        hpm++; 
+        hp=hpp+=cf.hp;
+        bitacora.agregaDatosLn("El jugador decidio aumentar su vida");
+      break;
     }
     exp-=explimit;
     explimit+=cf.expinc;

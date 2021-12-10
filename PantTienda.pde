@@ -70,13 +70,13 @@ class PantTienda{
   
   void mouseProcess(int x,int y,int b){
     if(btncomp.isClicked(x,y) && b==LEFT){
-      btncomp.toggleMarked();
-      btnvend.toggleMarked();
+      btncomp.activeMarked();
+      btnvend.desactiveMarked();
       trademode=TMBUY;
     }  
     if(btnvend.isClicked(x,y) && b==LEFT){
-      btncomp.toggleMarked();
-      btnvend.toggleMarked();
+      btncomp.desactiveMarked();
+      btnvend.activeMarked();
       trademode=TMSELL;  
     }  
     if(btncont.isClicked(x,y) && b==LEFT)
