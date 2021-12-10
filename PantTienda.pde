@@ -28,7 +28,7 @@ class PantTienda{
     citpotn.toggleActive();
     citfpot.toggleActive();
     cittonic.toggleActive();
-    tienda=loadImage("sprite/backgr/store_ok.png");
+    tienda=loadImage("sprite/backgr/store_ok.jpg");
     imgtrademode=loadImage("sprite/items/trademode.png");
     trademode=TMBUY;
     btncomp.toggleMarked();

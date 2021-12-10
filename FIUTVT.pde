@@ -147,7 +147,7 @@ void setup(){
   createTerreno();
   gmode=true;
   fbase=createFont("Arial Black",24);
-  imgbackgr=loadImage("sprite/backgr/backgr.png");
+  imgbackgr=loadImage("sprite/backgr/backgr.jpg");
   imgatk=loadImage("sprite/icon/icon_atk.png");
   imgdef=loadImage("sprite/icon/icon_def.png");
   imghpm=loadImage("sprite/icon/icon_hpm.png");
