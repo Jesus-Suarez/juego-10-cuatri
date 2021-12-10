@@ -103,6 +103,9 @@ class PantCombate{
   void startBattle(){
     if(!battleactive){
       bitacora.agregaDatosLn("¡El jugador entro en combate!");
+      btnatk.desactiveMarked();
+      btndef.desactiveMarked();
+      btnitem.desactiveMarked();
       fasebatalla=FBINTRO;
       battleactive=BATTLEON;
       createEnemies();
@@ -343,12 +346,18 @@ class PantCombate{
   
   void toggleMarks(){
     switch(action){
-      case ACATK: btnatk.toggleMarked(); break;
-      case ACDEF: btndef.toggleMarked(); break;
-      case ACITM: btnitem.toggleMarked();
-                  if(citpotn.active) citpotn.toggleActive();
-                  if(citfptn.active) citfptn.toggleActive();
-                  if(cittonic.active) cittonic.toggleActive();
+      case ACATK: 
+        btnatk.toggleMarked(); 
+      break;
+      case ACDEF: 
+        btndef.toggleMarked();
+      break;
+      case ACITM: 
+        btnitem.toggleMarked();
+        if(citpotn.active) citpotn.toggleActive();
+        if(citfptn.active) citfptn.toggleActive();
+        if(cittonic.active) cittonic.toggleActive();
+      break;
     }
   }
    
