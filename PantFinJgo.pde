@@ -12,8 +12,8 @@ class PantFinJgo{
   PantFinJgo(){
     btnback=new Boton(400,700,200,100,5);
     btnback.activate();
-    imgdefeat=loadImage("sprite/backgr/graveyard.png");
-    imgvictry=loadImage("sprite/backgr/throne.png");
+    imgdefeat=loadImage("sprite/backgr/graveyard.jpg");
+    imgvictry=loadImage("sprite/backgr/throne.jpg");
   }
   
   void display(){
