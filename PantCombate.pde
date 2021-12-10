@@ -33,9 +33,9 @@ class PantCombate{
   PImage imagenSangre = loadImage("sprite/icon/blood.png");
     
   PantCombate(){
-    pasto=loadImage("sprite/backgr/pasto_ok.png");
-    desrt=loadImage("sprite/backgr/desierto_ok.png");
-    woods=loadImage("sprite/backgr/bosque_ok.png");
+    pasto=loadImage("sprite/backgr/pasto_ok.jpg");
+    desrt=loadImage("sprite/backgr/desierto_ok.jpg");
+    woods=loadImage("sprite/backgr/bosque_ok.jpg");
     btnback=new Boton(400,700,200,100,23);
     btnatk=new Boton(150,550,150,80,30);
     btndef=new Boton(400,550,150,80,31);
