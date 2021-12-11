@@ -38,6 +38,10 @@ class LangFiles{
     return langs[i][actlang];
   }
 
+  /**
+   * Este método obtiene de forma automática el número de caracteres
+   * del archivo lang configurado 
+  **/
   int getCharacterLanguajes(int languaje){
     if(languaje==LGSPA){
       file=loadStrings("spa.lang");
