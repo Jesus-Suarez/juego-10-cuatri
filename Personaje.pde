@@ -88,6 +88,10 @@ class Personaje{
     }
   }
   
+  /**
+   * Esté método se usa en la batalla para dibujar al jugador
+   * y sus atributos como el nivel, su vida, su tiempo de elección, etc.. 
+  **/
   void battleDisplay(){
     if(gmode){
       ssleft.display(cx,cy,cf.ss,cf.ss);
@@ -202,6 +206,9 @@ class Personaje{
     as.setActiveSpriteSet(tonicd);
   }
   
+  /**
+   * Guardamos la bitácora cuando el enemigo hace daño al jugador
+  **/
   void herida(int d){
     String message = "El enemigo hizo un daño de :"+d+" a nuestro personaje";
     bitacora.agregaDatosLn(message);
@@ -232,6 +239,10 @@ class Personaje{
     defactive=!defactive;
   }
   
+   /**
+    * Aquí se aumenta un atributo del jugador cuando este sube de nivel y se 
+    * guarda en la bitácora
+   **/
   void addAttr(int a){
     switch(a){
       case ATATK: 

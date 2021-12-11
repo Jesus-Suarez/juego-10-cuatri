@@ -17,15 +17,18 @@ class Bitacora{
     return ""+year()+"-"+month()+"-"+day() +" a las "+hour()  /*+" con "+minute() */;
   }
 
+  /**
+   * Aquí guardamos cada bitácora por tiempo específico Ejemplo:
+   * [2021-12-09 21:57:00] – MENSAJE
+  **/
   String agregarFechaHora(){
-    //Aqui guardamos cada bitacora por tiempo especifico Ejemplo:
-    //[2021-12-09 21:57:00] - MENSAJE
     return ""+agregaFecha()+" "+hour()+":"+minute()+":"+second();
   }
 
-  
+   /**
+    * Guardamos la bitácora con el formato de fecha y el mensaje a guardar
+   **/
   void agregaDatosLn(String s){
-    //Guardamos la bitacora con el formato de fecha y el mensaje a guardar
     s = "["+agregarFechaHora()+"] - "+s;
     output.println(s);
     output.flush();

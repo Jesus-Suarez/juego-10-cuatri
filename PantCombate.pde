@@ -403,11 +403,14 @@ class PantCombate{
     }  
   }
   
+  /**
+   * Esté método se usa cuando se gana una batalla ya que gana
+   * experiencia y dinero, esto se guarda en la bitacora
+  **/
   void getLoot(){
-    pers.exp+=enemy.exp;
-    pers.cash+=enemy.cash;
-    //Agregamos mensaje en bitacora de cuanta exp y cash recibe el personaje
-    bitacora.agregaDatosLn("El jugador ha recibido "+enemy.exp+" de experiencia y "+enemy.cash+" pesos");
+    pers.exp += enemy.exp;
+    pers.cash += enemy.cash;
+    bitacora.agregaDatosLn("El jugador ha recibido " + enemy.exp + " de experiencia y " + enemy.cash + " pesos");
     pers.updateInv(enemy.item,TMBUY);
   }
 }

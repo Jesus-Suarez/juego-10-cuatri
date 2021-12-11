@@ -46,6 +46,10 @@ class PantLvlUp{
     }  
   }
   
+   /**
+    * Este método se utiliza para que el jugador suba de
+    * nivel y se guarda en la bitácora
+   **/
   void addAttr(int a){
     bitacora.agregaDatosLn("El jugador ha subido de nivel");
     cf.lvlini++;

@@ -115,7 +115,11 @@ class PantTienda{
     else
       sellItem(i);
   }
-  //Este método escribe datos en la bitácora
+  
+   /**
+    * Este método se utiliza para comprar items en 
+    * la tienda y se guarda en la bitácora
+   **/
   void buyItem(int i){
     if(pers.cash>=getItemVCost(i)){
       pers.cash-=getItemVCost(i);
@@ -124,7 +128,11 @@ class PantTienda{
       sfxcash.trigger();
     }
   }
-  //Este método escribe datos en la bitácora
+
+   /**
+    * Este método se utiliza para vender items en 
+    * la tienda y se guarda en la bitácora
+   **/
   void sellItem(int i){
     if(pers.getItemInv(i)>0){
       pers.cash+=getItemCCost(i);

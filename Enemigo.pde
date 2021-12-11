@@ -42,6 +42,10 @@ class Enemigo{
     sfxded=ed.getSfxDed();
   }
   
+  /**
+   * Esté método se usa en la batalla para dibujar al enemigo
+   * y sus atributos como el nivel, su vida y su tiempo de elección 
+  **/
   void display(){
     if(gmode){ 
       fill(0, 408, 612);
